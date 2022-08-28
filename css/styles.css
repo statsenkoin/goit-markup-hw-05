@@ -47,6 +47,8 @@
   --color-backdrop-overlay: rgba(0, 0, 0, 0.2);
   --color-modal-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  --color-modal-btn: #000000;
+  --color-modal-btn-border: rgba(0, 0, 0, 0.1);
 
   /* -------------- Шрифти сайту --------------------- */
 
@@ -741,4 +743,30 @@ img {
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  color: var(--color-modal-btn);
+  background-color: var(--color-background-primary);
+  border: 1px solid var(--color-modal-btn-border);
+}
+
+.modal-btn-close-icon {
+  fill: currentColor;
+}
+
+.button-close:hover,
+.button-close:focus {
+  color: var(--color-accent);
 }
